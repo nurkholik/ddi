@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: ddi
+  datasource:
+    url: jdbc:h2:file:~/h2/data/ddi;
+    username: ddi
+    password: ddi
+    driverClassName: org.h2.Driver
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create
+  h2:
+    console:
+      enabled: true
+      path: /db
+      settings:
+        web-allow-others: true
+
+server:
+  port: 2302
+
+app:
+  package:
+    controller: com.github.nurkholik.ddi.controller
